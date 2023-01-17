@@ -1,0 +1,69 @@
+<nav class="navbar shadow navbar-light bg-light">
+    <div class="container-fluid">
+
+        <button class="navbar-toggler me-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <h3 class="navbar-brand mb-0 mx-auto">Corretora IMV</h3>
+
+    </div>
+</nav>
+
+<div class="offcanvas offcanvas-start d-flex flex-column flex-shrink-0 p-3 bg-light" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel" style="width: 280px;">
+
+    <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-circle"
+            viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+        </svg>
+
+        &nbsp;
+
+        <span class="fs-4">Você</span>
+    </div>
+
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="#" class="nav-link link-dark">
+                Editar perfil
+            </a>
+        </li>
+        <li>
+            <a routerLink="/properties" class="nav-link link-dark">
+                Cadastrar imóvel
+            </a>
+        </li>
+        <li>
+            <a class="nav-link link-dark" routerLink="properties">
+                Dashboard
+            </a>
+        </li>
+    </ul>
+    <hr>
+
+</div>
+
+<div class="container mt-50">
+    <div class="mt-3 card shadow">
+
+        <router-outlet></router-outlet>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="container text-center text-light bg-dark pt-3 fixed-bottom">
+        <p>&#169; Copyright 2023 | Made by Felipe da Silva</p>
+    </div>
+</div>

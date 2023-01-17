@@ -1,0 +1,35 @@
+<form [formGroup]="formProperty" (ngSubmit)="saveNewProperty()">
+    <div class="modal-content">
+        <div class="modal-header">
+            Dados do imóvel
+        </div>
+        <div class="modal-body">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">ID</label>
+                <input type="text" class="form-control" formControlName="id" id="exampleFormControlInput1" placeholder="ID do imóvel">
+                <div class="form-text text-danger" *ngIf="isFormControlInvalid('id')">
+                    O ID é obrigatório!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Endereço</label>
+                <input type="email" class="form-control" formControlName="address" id="exampleFormControlInput1" placeholder="Endereço do imóvel">
+                <div class="form-text text-danger" *ngIf="isFormControlInvalid('address')">
+                    Um endereço deve ser adicionado!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Preço</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Preço do imóvel">
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Anexar imagem</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+    </div>
+</form>
